@@ -14,6 +14,9 @@ namespace Homework_LINQ
                 new Contact("Susan", "0983459213", "Microsoft")
             };
 
+            Console.WriteLine(contactList.FirstOrDefault(person => person.Number.Contains("7")));
+            Console.WriteLine();
+
             IEnumerable<string> contacts = contactList
                 .OrderBy(person => person.Number)
                 .ThenBy(person => person.Name)
